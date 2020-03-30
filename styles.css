@@ -27,7 +27,12 @@ label{
     display: block;
     font-size: .75rem;
     margin-bottom: 12px;
-    margin-top: 48px;
+    margin-top: 32px;
+}
+
+.checkbox-label{
+    display: inline-block;
+    margin-bottom: 0px;
 }
 
 .first{
@@ -51,11 +56,11 @@ label{
 }
 
 .left{
-    padding-right:48px;
+    padding-right:32px;
 }
 
 .half{
-    width: 264px;
+    width: 272px;
     display: inline-block;
 }
 
@@ -69,4 +74,8 @@ label{
     padding:48px;
     border: 1px solid black;
     margin-bottom: 40px;
+}
+
+.fs-text-input:disabled{
+    cursor: not-allowed;
 }

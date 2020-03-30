@@ -19,25 +19,81 @@
             Generator
         </li>
     </ul>
-    <div class="container" v-for="(item,index) in output">
+    <div class="container" v-for="(item,index) in output" v-bind:style="{boxShadow:item[2], borderWidth:item[0]}">
         <form>
             <div class="full">
                 <label class="first">
-                    A Full Width Text Input
+                    Venue Name
+                </label>
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" >
+            </div>
+            <div class="full">
+                <label>
+                    Address
+                </label>
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" >
+            </div>
+            <div class="full">
+                <label>
+                    Cross Street
                 </label>
                 <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" >
             </div>
             <div class="half left">
                 <label >
-                    A Full Width Text Input
+                    City
                 </label>
                 <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
             </div>
             <div class="half">
                 <label>
-                    A Full Width Text Input
+                    State
+                </label>
+                <input class="fs-text-input" type="select" autocomplete="off" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
+            </div>
+            <div class="half left">
+                <label>
+                    Country
+                </label>
+                <input class="fs-text-input" type="select" autocomplete="off" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
+            </div>
+            <div class="half">
+                <label>
+                    Postal Code
                 </label>
                 <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
+            </div>
+            <div class="full">
+                <input type="checkbox" id="supervenue" name="supervenue" value="inside">
+                <label for="supervenue"  class="checkbox-label">This place is inside of another place.</label>
+            </div>
+            <div class="full">
+                <label>
+                    Inside
+                </label>
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" disabled >
+            </div>
+            <div class="half left">
+                <label>
+                    Twitter Handle
+                </label>
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
+            </div>
+            <div class="half">
+                <label>
+                    Phone Number
+                </label>
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
+            </div>
+            <div class="full">
+                <input type="checkbox" id="supervenue" name="supervenue" value="inside">
+                <label for="supervenue"  class="checkbox-label">This is a private venue.</label>
+            </div>
+            <div class="full">
+                <label>
+                    Categort
+                </label>
+                <input class="fs-text-input" type="select" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" >
             </div>
         </form>
     </div>
