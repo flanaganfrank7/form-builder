@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Tester</title>
-    <!-- Turn on Generator -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="family.css">
@@ -14,31 +13,31 @@
     <div id="ffForms" >
     <ul>
         <li>
-            Basic
+            <a href="index.html">Basic</a>
         </li>
         <li>
-            <a href="generator.html">Generator</a>
+            Generator
         </li>
     </ul>
-    <div class="container">
+    <div class="container" v-for="(item,index) in output">
         <form>
             <div class="full">
                 <label class="first">
                     A Full Width Text Input
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." onmouseover="this.style.color='red'">
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}" >
             </div>
             <div class="half left">
                 <label >
                     A Full Width Text Input
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something...">
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
             </div>
             <div class="half">
                 <label>
                     A Full Width Text Input
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something...">
+                <input class="fs-text-input" type="text" placeholder="Please type something..." v-bind:style="{borderWidth:item[0], backgroundColor:item[1]}">
             </div>
         </form>
     </div>

@@ -9,7 +9,19 @@ body{
     padding-top: 128px;
 }
 
+ul{
+    list-style: none;
+    padding: 0;
+}
 
+li{
+    display: inline-block;
+    margin-right: 24px;
+}
+
+a:visited{
+    color:blue;
+}
 
 label{
     display: block;
@@ -29,7 +41,8 @@ label{
     font-size: 1rem;
     padding: 12px;
     outline: none;
-    border-color: black;
+    border-color: lightslategray;
+    border-width: 1px;
     border-style: solid;
 }
 
