@@ -1,7 +1,7 @@
 const styles = {
 	borderWidth:["0px 0px 1px 0px", "1px 1px 1px 1px", "0"],
 	backgroundColor:['none','#F4F4F4'],
-	boxShadow: ['0px 10px 15px rgba(0, 0, 0, 0.1)', 'none', 'inset -2px 2px 10px rgba(0, 0, 0, 0.1)'],
+	boxShadow: ['0px 10px 15px rgba(0, 0, 0, 0.1)', 'none'],
 	height:['32px','40px']
 }
 
