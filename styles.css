@@ -1,0 +1,59 @@
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+body{
+    width: 100%;
+    background-color: #F4F4F4;
+    padding-top: 128px;
+}
+
+
+
+label{
+    display: block;
+    font-size: .75rem;
+    margin-bottom: 12px;
+    margin-top: 48px;
+}
+
+.first{
+    margin-top: 0px !important;
+}
+
+.fs-text-input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    padding: 12px;
+    outline: none;
+    border-color: black;
+    border-style: solid;
+}
+
+.full{
+    width: 100%;
+}
+
+.left{
+    padding-right:48px;
+}
+
+.half{
+    width: 264px;
+    display: inline-block;
+}
+
+#ffForms{
+    width: 680px;
+    margin: 0 auto;
+}
+
+.container{
+    background-color: white;
+    padding:48px;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
