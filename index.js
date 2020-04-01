@@ -1,3 +1,20 @@
+$('#font-controller').on('change', function(){
+	if(this.value == "System"){
+		console.log(this.value)
+		$('body').css('font-family', "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ")
+	}
+	if(this.value == "Authentic"){
+		
+	}
+	if(this.value == "Sometype"){
+		
+	}
+})
+
+
+
+// Generator Stuff
+
 const styles = {
 	borderWidth:["0px 0px 1px 0px", "1px 1px 1px 1px", "0"],
 	backgroundColor:['none','#F4F4F4'],

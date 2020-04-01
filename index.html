@@ -6,11 +6,18 @@
     <title>Form Builder</title>
     <!-- Turn on Generator -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="family.css">
 </head>
 <body>
+    <div id="controls">
+        <select id="font-controller">
+            <option>Sometype</option>
+            <option>Authentic</option>
+            <option>System</option>
+        </select>
+    </div>
     <div id="ffForms" >
     <div class="container">
         <form>
@@ -81,8 +88,8 @@
                 <input class="fs-text-input" type="text" placeholder="Please type something...">
             </div>
             <div class="full">
-                <input type="checkbox" id="supervenue" name="supervenue" value="inside">
-                <label for="supervenue"  class="checkbox-label">This is a private venue.</label>
+                <input type="checkbox" id="private" name="private" value="inside">
+                <label for="private"  class="checkbox-label">This is a private venue.</label>
             </div>
             <div class="full">
                 <label>
