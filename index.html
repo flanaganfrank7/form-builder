@@ -4,102 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Builder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <!-- Turn on Generator -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="family.css">
 </head>
-<body>
-    <div id="ffForms" >
-    <ul>
-        <li>
-            Basic
-        </li>
-        <li>
-            <a href="generator.html">Generator</a>
-        </li>
-    </ul>
-    <div class="container">
-        <form>
+<body c-mode="light" ht="40">
+    <div id="controller">
+        <button id="inputStylesButton">Toggle Form Styles</button>
+        <button id="tileStylesButton">Toggle Tiles</button>
+        <button id="schemeButton" disabled>Toggle Dark Mode</button>
+        <button id="heightButton">Toggle Input Height</button>
+        <button id="labelButton" value="14">Toggle Label Size</button>
+        <button id="paddingButton" value="48">Toggle Padding</button>
+        <select id="selectFont">
+            <option>System Fonts</option>
+            <option>Sometype Mono</option>
+            <option>Authentic Sans</option>
+            <option>Combination</option>
+        </select>
+    </div>
+    <form id="non-tiled">
+    <div class="tile-header">
+        Basic Information
+    </div>
+    <div class="tile">
+        
             <div class="full">
                 <label class="first">
                     Venue Name
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
             </div>
             <div class="full">
                 <label>
                     Address
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
             </div>
             <div class="full">
                 <label>
                     Cross Street
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
             </div>
             <div class="half left">
                 <label >
                     City
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text"  status="underline" placeholder="Please type something..." >
             </div>
             <div class="half">
                 <label>
                     State
                 </label>
-                <input class="fs-text-input" type="select" autocomplete="off" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" autocomplete="off"  status="underline" placeholder="Please type something..." >
             </div>
             <div class="half left">
                 <label>
                     Country
                 </label>
-                <input class="fs-text-input" type="select" autocomplete="off" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" autocomplete="off"  status="underline" placeholder="Please type something..." >
             </div>
             <div class="half">
                 <label>
                     Postal Code
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text"  status="underline" placeholder="Please type something..." >
+            </div>
+        </form>
+        <div class="full">
+            <label>Is this venue inside of another venue?</label>
+            <input type="radio" name="yes" value="yes" > Yes
+            <input type="radio" name="no" value="no" checked>No
+        </div>
+        <div class="full">
+            <label class="disabled">
+                Inside
+            </label>
+            <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." disabled>
+        </div>
+        <div class="half left">
+            <label>
+                Twitter Handle
+            </label>
+            <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
+        </div>
+        <div class="half">
+            <label>
+                Phone Number
+            </label>
+            <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something...">
+        </div>
+        <div class="full">
+            <label>
+                Category
+            </label>
+            <input class="fs-text-input underline" type="select" status="underline" placeholder="Please type something..." >
+        </div>
+        <div class="full">
+            <input type="checkbox" id="supervenue" name="supervenue" value="inside">
+            <label for="supervenue"  class="checkbox-label">This is a private venue.</label>
+        </div>
+    </div>
+            
+  
+
+        </div>
+    </form>
+    <form id="tiled">
+        <div class="tile-header">
+            Basic Information
+        </div>
+        <div class="tile">
+            
+                <div class="full">
+                    <label class="first">
+                        Venue Name
+                    </label>
+                    <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="full">
+                    <label>
+                        Address
+                    </label>
+                    <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="full">
+                    <label>
+                        Cross Street
+                    </label>
+                    <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="half left">
+                    <label >
+                        City
+                    </label>
+                    <input class="fs-text-input underline" type="text"  status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="half">
+                    <label>
+                        State
+                    </label>
+                    <input class="fs-text-input underline" type="text" autocomplete="off"  status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="half left">
+                    <label>
+                        Country
+                    </label>
+                    <input class="fs-text-input underline" type="text" autocomplete="off"  status="underline" placeholder="Please type something..." >
+                </div>
+                <div class="half">
+                    <label>
+                        Postal Code
+                    </label>
+                    <input class="fs-text-input underline" type="text"  status="underline" placeholder="Please type something..." >
+                </div>
+        </div>
+        <div class="tile-header">
+            Supervenue
+        </div>
+        <div class="tile">
+            <div class="full">
+                <label style="margin-top: 0; margin-bottom: 1rem;">Is this venue inside of another venue?</label>
+                <input type="radio" name="yes" value="yes" > Yes
+                <input type="radio" name="no" value="no" checked>No
             </div>
             <div class="full">
-                <input type="checkbox" id="supervenue" name="supervenue" value="inside">
-                <label for="supervenue"  class="checkbox-label">This place is inside of another place.</label>
-            </div>
-            <div class="full">
-                <label>
+                <label class="disabled">
                     Inside
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." disabled>
             </div>
+        </div>
+        <div class="tile-header">
+            Venue Details
+        </div>
+        <div class="tile">
             <div class="half left">
-                <label>
+                <label style="margin-top: 0;">
                     Twitter Handle
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something..." >
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something..." >
             </div>
             <div class="half">
-                <label>
+                <label style="margin-top: 0;">
                     Phone Number
                 </label>
-                <input class="fs-text-input" type="text" placeholder="Please type something...">
+                <input class="fs-text-input underline" type="text" status="underline" placeholder="Please type something...">
+            </div>
+            <div class="full">
+                <label>
+                    Category
+                </label>
+                <input class="fs-text-input underline" type="select" status="underline" placeholder="Please type something..." >
             </div>
             <div class="full">
                 <input type="checkbox" id="supervenue" name="supervenue" value="inside">
                 <label for="supervenue"  class="checkbox-label">This is a private venue.</label>
             </div>
-            <div class="full">
-                <label>
-                    Categort
-                </label>
-                <input class="fs-text-input" type="select" placeholder="Please type something..." >
+        </div>
+                
+      
+    
             </div>
         </form>
-
-    </div>
-    </div>
 </body>
 <script src="index.js"></script>
 </html>
